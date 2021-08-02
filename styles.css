@@ -1,0 +1,156 @@
+/* Global variables */
+
+:root {
+  --background: rgba(0, 0, 0, 0.9);
+  --color-primary: #ffffff;
+  --color-secondary: #8e8e93;
+  --bg-primary: #6168db;
+  --bg-secondary: #1c1c1e;
+  --bg-tertiary: #262626;
+}
+
+/* Resets */
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body,
+p,
+span,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+
+.background {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 30px 16px 16px 16px;
+  justify-content: space-between;
+  background-color: var(--background);
+}
+
+/* Splide */
+
+.splide {
+  flex: 1;
+}
+
+.splide__track,
+.splide__list,
+.splide__slide {
+  height: 100%;
+}
+
+ul.splide__pagination {
+  margin-bottom: 42px;
+}
+
+button.splide__pagination__page {
+  background-color: var(--bg-tertiary);
+}
+
+button.splide__pagination__page.is-active {
+  transform: scale(1);
+}
+
+/* Content */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.title {
+  font-size: 24px;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-secondary);
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-width: 400px;
+  min-height: calc(100vh - 200px);
+}
+
+/* Icons */
+
+.icon--close {
+  width: 20px;
+  margin-bottom: 18px;
+  align-self: flex-end;
+}
+
+/* Buttons */
+
+.btn {
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 4px;
+  padding: 18px 16px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--primary {
+  color: var(--color-primary);
+  background-color: var(--bg-primary);
+}
+
+.btn--secondary {
+  color: var(--color-primary);
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--bg-tertiary);
+}
+
+.buttons-want {
+  display: none;
+}
+
+.buttons-want button:first-of-type {
+  margin-right: 16px;
+}
+
+/* Media queries */
+@media (max-height: 580px) {
+  .title {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .image-container img {
+    width: 200px;
+  }
+  ul.splide__pagination {
+    bottom: -0.5em;
+  }
+}
